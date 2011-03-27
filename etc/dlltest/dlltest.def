@@ -1,0 +1,9 @@
+
+LIBRARY dlltest
+DESCRIPTION "DLL test"
+EXPORTS
+	DllAdd
+	DllMessageBoxAPI
+	DllMul
+
+VERSION 1.0

@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>ﾋﾞﾙﾄﾞのﾛｸﾞ</h1>
+<h3>
+--------------------構成: dlltest - Win32 Release--------------------
+</h3>
+<h3>ｺﾏﾝﾄﾞ ﾗｲﾝ</h3>
+一時ﾌｧｲﾙ "C:\Users\rti\AppData\Local\Temp\RSP4976.tmp" を作成し、次の内容を記録します
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "DLLTEST_EXPORTS" /Fp"Release/dlltest.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\rti\Documents\My Dropbox\sexyhook\etc\dlltest\dlltest.cpp"
+]
+Creating command line "cl.exe @C:\Users\rti\AppData\Local\Temp\RSP4976.tmp" 
+一時ﾌｧｲﾙ "C:\Users\rti\AppData\Local\Temp\RSP4977.tmp" を作成し、次の内容を記録します
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "DLLTEST_EXPORTS" /Fp"Release/dlltest.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\rti\Documents\My Dropbox\sexyhook\etc\dlltest\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\rti\AppData\Local\Temp\RSP4977.tmp" 
+一時ﾌｧｲﾙ "C:\Users\rti\AppData\Local\Temp\RSP4978.tmp" を作成し、次の内容を記録します
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:no /pdb:"Release/dlltest.pdb" /machine:I386 /def:".\dlltest.def" /out:"Release/dlltest.dll" /implib:"Release/dlltest.lib" 
+".\Release\dlltest.obj"
+".\Release\StdAfx.obj"
+]
+ｺﾏﾝﾄﾞ ﾗｲﾝ "link.exe @C:\Users\rti\AppData\Local\Temp\RSP4978.tmp" の作成中
+<h3>ｱｳﾄﾌﾟｯﾄ ｳｨﾝﾄﾞｳ</h3>
+ｺﾝﾊﾟｲﾙ中...
+StdAfx.cpp
+ｺﾝﾊﾟｲﾙ中...
+dlltest.cpp
+ﾘﾝｸ中...
+   ﾗｲﾌﾞﾗﾘ Release/dlltest.lib とｵﾌﾞｼﾞｪｸﾄ Release/dlltest.exp を作成中
+
+
+
+<h3>結果</h3>
+dlltest.dll - ｴﾗｰ 0、警告 0
+</pre>
+</body>
+</html>

@@ -1,0 +1,7 @@
+
+LIBRARY dlltest2
+DESCRIPTION "DLL2 test"
+EXPORTS
+	Dll2Mul
+
+VERSION 1.0
