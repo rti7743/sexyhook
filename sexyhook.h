@@ -177,6 +177,10 @@
 					,inVCallThisPointer \
 					); \
 		} \
+		void UnHook() \
+		{ \
+			FunctionUnHookFunction(); \
+		} \
 		virtual ~SEXYHOOK_LINE_STRCAT(SEXYHOOKFunc,__LINE__)() \
 		{ \
 			FunctionUnHookFunction(); \
@@ -201,6 +205,10 @@
 #define SEXYHOOK_END \
 	} } SEXYHOOK_LINE_STRCAT(objectFUNCHook,__LINE__);\
 	SEXYHOOK_LINE_STRCAT(objectFUNCHook,__LINE__).Hook
+
+#define SEXYHOOK_END_AS() \
+	} } 
+
 
 
 //一時的にフックをやめる
