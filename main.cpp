@@ -309,8 +309,6 @@ public:
 	}
 };
 
-
-
 int main()
 {
 	//フック元呼び出しなどのテスト
@@ -366,32 +364,12 @@ int main()
 			SEXYHOOK_ASSERT(r == 20);
 		}
 
-		//自分自身の再呼び出し その1
+		//自分自身の再呼び出し
 		{
 			SEXYHOOK_BEGIN(int,SEXYHOOK_CLASS,&classMethodCallTest::Add,(int a))
 			{
-				{
-					//一時的にフックを解除
-					SEXYHOOK_UNHOOK();
-					//元の関数を呼び出す
-					return SEXYHOOK_THIS(classMethodCallTest*)->Add(a);
-				}
-			}
-			SEXYHOOK_END();
-
-			int r = c.Add(10);		//10 + 2 = 12
-			SEXYHOOK_ASSERT(r == 12);
-		}
-		//自分自身の再呼び出し その2
-		{
-			SEXYHOOK_BEGIN(int,SEXYHOOK_CLASS,&classMethodCallTest::Add,(int a))
-			{
-				{
-					//一時的にフックを解除
-					SEXYHOOK_UNHOOK();
-					//元の関数を呼び出す
-					return CallOrignalFunction(a);
-				}
+				//元の関数を呼び出す
+				return CallOrignalFunction(a);
 			}
 			SEXYHOOK_END();
 

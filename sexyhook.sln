@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual C++ Express 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sexyhook", "sexyhook.vcproj", "{3A6EE8C7-CA5B-4775-8D3D-390AF4B33700}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sexyhook", "sexyhook.vcxproj", "{3A6EE8C7-CA5B-4775-8D3D-390AF4B33700}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
