@@ -868,7 +868,7 @@ private:
 			}
 		}
 
-		DebugBreak();
+		SEXYHOOK_BREAKPOINT;
 		return 0;
 	}
 
@@ -935,7 +935,7 @@ private:
 			case 7:		return 0;//bh/di/edi/mm7/xmm7
 			}
 		}
-		DebugBreak();
+		SEXYHOOK_BREAKPOINT;
 		return 0;
 	}
 
