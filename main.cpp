@@ -369,7 +369,7 @@ int main()
 			SEXYHOOK_BEGIN(int,SEXYHOOK_CLASS,&classMethodCallTest::Add,(int a))
 			{
 				//Œ³‚ÌŠÖ”‚ğŒÄ‚Ño‚·
-				return CallOrignalFunction(a);
+				return CallOriginalFunction(a);
 			}
 			SEXYHOOK_END();
 

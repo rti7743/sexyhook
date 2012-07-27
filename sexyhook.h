@@ -173,7 +173,7 @@
 			FunctionHookFunction( \
 					 p \
 					,SEXYHOOK_DARKCAST(0,&SEXYHOOK_LINE_STRCAT(SEXYHOOKFunc,__LINE__)::HookFunction) \
-					,SEXYHOOK_DARKCAST(0,&SEXYHOOK_LINE_STRCAT(SEXYHOOKFunc,__LINE__)::CallOrignalFunction) \
+					,SEXYHOOK_DARKCAST(0,&SEXYHOOK_LINE_STRCAT(SEXYHOOKFunc,__LINE__)::CallOriginalFunction) \
 					,inVCallThisPointer \
 					); \
 		} \
@@ -192,7 +192,7 @@
 			static uintptr_t thisSaver = 0; \
 			return &thisSaver ; \
 		} \
-		SEXYHOOK_REMACRO(CALLTYPE##__STATIC) RET  CALLTYPE CallOrignalFunction ARGS \
+		SEXYHOOK_REMACRO(CALLTYPE##__STATIC) RET  CALLTYPE CallOriginalFunction ARGS \
 		{ \
 			volatile int mizumashi = 1 ; for(volatile int i = 0 ; i < 1000 ; i++){ mizumashi= mizumashi * i + 1; }; \
 			throw 0;\
@@ -252,7 +252,7 @@ public:
 	};
 
 	//関数フックを開始する.
-	void FunctionHookFunction(void * inUkeFunctionProc , void * inSemeFunctionProc ,void * inCallOrignalFunctionProc , void * inVCallThisPointer )
+	void FunctionHookFunction(void * inUkeFunctionProc , void * inSemeFunctionProc ,void * inCallOriginalFunctionProc , void * inVCallThisPointer )
 	{
 		//フックする関数(攻め)が開始するアドレスを求める
 		uintptr_t semeFunctionAddr = CalcSemeFunctionAddress(inSemeFunctionProc );
@@ -272,7 +272,7 @@ public:
 		OverraideFunction(this->OrignalFunctionAddr , this->HookAsm,this->HookAsmSize);
 
 		//フック用に退避させたルーチンの末尾に元のコードに戻るjmpコードを埋め込む
-		uintptr_t orignalCallFunctionAddr = CalcSemeFunctionAddress(inCallOrignalFunctionProc );
+		uintptr_t orignalCallFunctionAddr = CalcSemeFunctionAddress(inCallOriginalFunctionProc );
 		int orginalCallAsmSize = MakeTrampolineHookAsm(
 			 (FUNCTIONHOOK_ASM*) (((uintptr_t)&this->OrignalAsm) + this->SaveAsmSize)
 			, orignalCallFunctionAddr + this->SaveAsmSize 
